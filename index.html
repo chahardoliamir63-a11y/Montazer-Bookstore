@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<!-- Mohammad Montazer Book Store - Main Landing Page -->
+<!-- A professional book showcase and ordering platform -->
+<html lang="fa" dir="rtl">
+<head>
+  <!-- Character encoding and viewport settings for proper display -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Page title and SEO meta tag -->
+  <title>فروش کتاب‌های محمد منتظر</title>
+  <meta name="description" content="خرید و سفارش آنلاین کتاب‌های محمد منتظر" />
+  <!-- Tailwind CSS stylesheet for styling -->
+  <link rel="stylesheet" href="src/output.css" />
+</head>
+<!-- Main body with Vazir font family and slate color scheme -->
+<body class="bg-slate-50 text-slate-800 overflow-x-hidden font-Vazir font-bold">
+
+  <!-- Header: Sticky navigation bar with logo, title, and menu -->
+  <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl">
+    <div class="mx-auto max-w-7xl px-4 py-4 md:px-6">
+      <div class="flex items-center justify-between gap-4">
+        <!-- Logo and site title section -->
+        <div class="flex items-center gap-3">
+          <div class="flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold text-white shadow-lg shadow-violet-200">
+            <img src="images/logo.jfif" alt="لوگوی کتاب‌های محمد منتظر" class="h-12 w-12 rounded-full border-2 border-violet-500 object-cover">
+          </div>
+          <div>
+            <h1 class="text-base font-bold text-slate-900 md:text-xl">کتاب‌های محمد منتظر</h1>
+            <p class="hidden text-xs text-slate-500 md:block">فروش آنلاین کتاب با طراحی مدرن</p>
+          </div>
+        </div>
+
+        <!-- Main navigation menu - visible on large screens -->
+        <nav class="hidden items-center gap-7 lg:flex">
+          <a href="#books" class="text-sm text-slate-700 transition hover:text-violet-600">کتاب‌ها</a>
+          <a href="#features" class="text-sm text-slate-700 transition hover:text-violet-600">ویژگی‌ها</a>
+          <a href="#order" class="text-sm text-slate-700 transition hover:text-violet-600">ثبت سفارش</a>
+          <a href="#about" class="text-sm text-slate-700 transition hover:text-violet-600">درباره ما</a>
+        </nav>
+
+        <!-- Call-to-action buttons - Admin panel and quick order -->
+        <div class="flex items-center gap-3">
+          <!-- Admin panel link (hidden on small screens) -->
+          <a href="admin.html" class="hidden rounded-full border-2 border-violet-200 bg-white px-5 py-2.5 text-sm text-violet-700 transition hover:bg-violet-50 md:inline-flex">
+            پنل مدیریت
+          </a>
+          <!-- Quick order button with prominent styling -->
+          <a href="#order" class="inline-flex rounded-full border-2 border-violet-200 bg-white px-5 py-2.5 text-sm text-blue-800 shadow-lg shadow-violet-200 transition hover:scale-[1.02] hover:bg-violet-50">
+            سفارش سریع
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section: Main banner with site introduction and key messaging -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-violet-100 via-white to-pink-100">
+    <!-- Decorative blurred background elements -->
+    <div class="absolute -right-16 top-0 h-72 w-72 rounded-full bg-violet-400/30 blur-3xl"></div>
+    <div class="absolute -left-16 bottom-0 h-72 w-72 rounded-full bg-pink-400/30 blur-3xl"></div>
+
+    <!-- Hero content container -->
+    <div class="mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-20">
+      <!-- Two-column layout: text content and image -->
+      <div class="grid items-center gap-10 lg:grid-cols-2">
+        <!-- Left column: Main message and CTA buttons -->
+        <div>
+          <!-- Status badge showing store availability -->
+          <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-violet-200 bg-white/90 px-4 py-2 text-sm text-violet-700 shadow-sm">
+            <span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
+            فروش ۴ عنوان کتاب با امکان ثبت سفارش
+          </span>
+
+          <h2 class="mb-6 text-4xl leading-tight text-slate-900 md:text-6xl">
+            ویترین حرفه‌ای
+            <span class="bg-gradient-to-r from-violet-700 to-pink-500 bg-clip-text text-transparent">
+              کتاب‌های محمد منتظر
+            </span>
+          </h2>
+
+          <p class="mb-8 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
+            خرید کتاب با ظاهری مدرن، معرفی کامل، تصاویر زیبا، فرم سفارش و تجربه‌ای روان برای کاربران موبایل و دسکتاپ.
+          </p>
+
+          <div class="mb-8 flex flex-wrap gap-4">
+            <a href="#books" class="rounded-full bg-gradient-to-r from-violet-600 to-pink-500 px-7 py-3.5 text-sm text-white shadow-lg shadow-violet-200 transition hover:scale-[1.03]">
+              مشاهده کتاب‌ها
+            </a>
+            <a href="https://ble.ir/Montazer_admin" target="_blank" rel="noopener noreferrer" class="rounded-full border border-violet-200 bg-white px-7 py-3.5 text-sm text-violet-700 transition hover:bg-violet-50">
+              ارتباط در بله
+            </a>
+          </div>
+
+          <!-- Stats grid showing key metrics -->
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <!-- Stat card: Number of books -->
+            <div class="rounded-2xl border border-white/70 bg-white/80 p-4 shadow-sm backdrop-blur">
+              <p class="text-2xl text-violet-700">۴</p>
+              <p class="mt-1 text-xs text-slate-500">عنوان کتاب</p>
+            </div>
+            <div class="rounded-2xl border border-white/70 bg-white/80 p-4 shadow-sm backdrop-blur">
+              <p class="text-2xl text-pink-600">چندعکسه</p>
+              <p class="mt-1 text-xs text-slate-500">گالری تعاملی</p>
+            </div>
+            <div class="rounded-2xl border border-white/70 bg-white/80 p-4 shadow-sm backdrop-blur">
+              <p class="text-2xl text-amber-500">۲۴/۷</p>
+              <p class="mt-1 text-xs text-slate-500">ثبت سفارش</p>
+            </div>
+            <div class="rounded-2xl border border-white/70 bg-white/80 p-4 shadow-sm backdrop-blur">
+              <p class="text-2xl text-indigo-600">ساده</p>
+              <p class="mt-1 text-xs text-slate-500">خرید راحت</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column: Hero image -->
+        <div class="flex justify-center lg:justify-end">
+          <img src="images/img-asli.jpg" alt="تصویر اصلی معرفی کتاب‌های محمد منتظر" class="w-12xl max-w-md rounded-[2rem] object-cover shadow-2xl">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section: Highlights of the platform capabilities -->
+  <section id="features" class="border-y border-slate-100 bg-white py-8">
+    <div class="mx-auto max-w-7xl px-4 md:px-6">
+      <!-- Feature cards grid -->
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div class="rounded-2xl border border-slate-100 bg-slate-50 p-4 text-center">
+          <p class="text-slate-900"> رضایت مندی بالا</p>
+          <p class="mt-1 text-sm text-slate-500">رنگ‌دار و تمیز</p>
+        </div>
+        <div class="rounded-2xl border border-slate-100 bg-slate-50 p-4 text-center">
+          <p class="text-slate-900">پشتیبانی سریع</p>
+          <p class="mt-1 text-sm text-slate-500">شبیه موبایل</p>
+        </div>
+        <div class="rounded-2xl border border-slate-100 bg-slate-50 p-4 text-center">
+          <p class="text-slate-900">🛒 ثبت سفارش</p>
+          <p class="mt-1 text-sm text-slate-500">فرم آماده خرید</p>
+        </div>
+        <div class="rounded-2xl border border-slate-100 bg-slate-50 p-4 text-center">
+          <p class="text-slate-900">⚡ سریع و سبک</p>
+          <p class="mt-1 text-sm text-slate-500">مناسب موبایل</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Books Section: Main content area displaying all available books -->
+  <section id="books" class="py-14 md:py-20">
+    <div class="mx-auto max-w-7xl px-4 md:px-6">
+      <!-- Section header with title and description -->
+      <div class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <span class="mb-2 inline-block text-sm text-violet-700">ویترین کتاب‌ها</span>
+          <h2 class="text-3xl text-slate-900 md:text-5xl">کتاب موردنظر خودت را انتخاب کن</h2>
+          <p class="mt-3 max-w-2xl leading-7 text-slate-500">
+            هر کتاب با تصویر، مشخصات، توضیح و دکمه سفارش نمایش داده می‌شود. اگر کتاب چند عکس داشته باشد، گالری برایش فعال است.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-violet-100 bg-white px-5 py-4 text-sm text-slate-700 shadow-sm">
+          ✨ طراحی کارت‌ها بهینه برای موبایل و دسکتاپ
+        </div>
+      </div>
+
+      <!-- Books grid layout - responsive 1-2 columns -->
+      <div class="grid gap-8 xl:grid-cols-2">
+
+        <!-- Book 1: Featured trilogy collection -->
+        <article class="overflow-hidden rounded-[2rem] border border-violet-100 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+          <!-- Book card layout: image gallery and details -->
+          <div class="grid md:grid-cols-2">
+            <!-- Image gallery section -->
+            <div class="bg-gradient-to-br from-violet-50 to-fuchsia-50 p-4 md:p-5">
+              <!-- Interactive image gallery with navigation -->
+              <div class="book-gallery relative overflow-hidden rounded-[1.5rem] border border-violet-100 bg-white shadow-sm" data-gallery>
+                <!-- Image carousel for book covers -->
+                <div class="gallery-track flex transition-transform duration-500">
+                  <img src="./images/book1-back.jpg.png" alt="جلد اول کتاب سه‌گانه عروسی پدر و مادر" class="h-[360px] w-full shrink-0 object-cover">
+                  <img src="./images/book2-front.jpg.png" alt="جلد دوم کتاب سه‌گانه عروسی پدر و مادر" class="h-[360px] w-full shrink-0 object-cover">
+                </div>
+
+                <!-- Gallery navigation buttons -->
+                <button class="gallery-prev absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl text-violet-700 shadow-lg transition hover:scale-110" type="button" aria-label="عکس قبلی">‹</button>
+                <button class="gallery-next absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl text-violet-700 shadow-lg transition hover:scale-110" type="button" aria-label="عکس بعدی">›</button>
+
+                <div class="gallery-dots absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2"></div>
+              </div>
+            </div>
+
+            <!-- Book details section -->
+            <div class="p-5 md:p-6">
+              <!-- Book title and status badge -->
+              <div class="mb-4 flex items-start justify-between gap-4">
+                <div>
+                  <span class="mb-2 inline-flex rounded-full bg-violet-100 px-3 py-1 text-xs text-violet-700">پیشنهاد ویژه</span>
+                  <h3 class="text-2xl text-slate-900">سه‌گانه عروسی پدر و مادر</h3>
+                </div>
+                <!-- Availability status -->
+                <span class="rounded-xl bg-pink-50 px-3 py-2 text-sm text-pink-600">موجود</span>
+              </div>
+
+              <p class="mb-5 text-sm leading-7 text-slate-600">
+                مجموعه‌ای خاص با طراحی جذاب و محتوای ارزشمند. مناسب برای مخاطبانی که دنبال روایت متفاوت و اثر ماندگار هستند.
+              </p>
+
+              <div class="mb-6 grid grid-cols-2 gap-3 text-sm">
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">نویسنده</span>
+                  <p class="mt-1">محمد منتظر</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">نوع</span>
+                  <p class="mt-1">سه‌گانه</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">وضعیت</span>
+                  <p class="mt-1 text-emerald-600">آماده سفارش</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">تصاویر</span>
+                  <p class="mt-1">۲ عکس</p>
+                </div>
+              </div>
+
+              <!-- Action buttons for ordering -->
+              <div class="flex flex-wrap gap-3">
+                <!-- Primary order button with dataset for form population -->
+                <button
+                  class="order-btn rounded-full bg-gradient-to-r from-violet-600 to-pink-500 px-6 py-3 text-sm text-white shadow-lg shadow-violet-200 transition hover:scale-[1.02]"
+                  data-book="سه‌گانه عروسی پدر و مادر"
+                  type="button"
+                >
+                  ثبت سفارش این کتاب
+                </button>
+                <a href="https://ble.ir/Montazer_admin" target="_blank" rel="noopener noreferrer" class="rounded-full border border-violet-200 bg-white px-6 py-3 text-sm text-violet-700 transition hover:bg-violet-50">
+                  پیام در بله
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 2: Independent book with single cover image -->
+        <article class="overflow-hidden rounded-[2rem] border border-violet-100 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+          <div class="grid md:grid-cols-2">
+            <div class="bg-gradient-to-br from-amber-50 to-rose-50 p-4 md:p-5">
+              <div class="book-gallery relative overflow-hidden rounded-[1.5rem] border border-amber-100 bg-white shadow-sm" data-gallery>
+                <div class="gallery-track flex transition-transform duration-500">
+                  <img src="./images/book2-front.jpg.png" alt="جلد کتاب دوم" class="h-[360px] w-full shrink-0 object-cover">
+                </div>
+                <div class="gallery-dots absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2"></div>
+              </div>
+            </div>
+
+            <div class="p-5 md:p-6">
+              <div class="mb-4 flex items-start justify-between gap-4">
+                <div>
+                  <span class="mb-2 inline-flex rounded-full bg-amber-100 px-3 py-1 text-xs text-amber-700">جدید</span>
+                  <h3 class="text-2xl text-slate-900">نام کتاب دوم</h3>
+                </div>
+                <span class="rounded-xl bg-emerald-50 px-3 py-2 text-sm text-emerald-600">موجود</span>
+              </div>
+
+              <p class="mb-5 text-sm leading-7 text-slate-600">
+                توضیح کوتاه درباره کتاب دوم. اینجا می‌توانی موضوع، سبک و ارزش مطالعه کتاب را خیلی خلاصه و جذاب بنویسی.
+              </p>
+
+              <div class="mb-6 grid grid-cols-2 gap-3 text-sm">
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">نویسنده</span>
+                  <p class="mt-1">محمد منتظر</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">نوع</span>
+                  <p class="mt-1">کتاب مستقل</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">وضعیت</span>
+                  <p class="mt-1 text-emerald-600">آماده سفارش</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">تصاویر</span>
+                  <p class="mt-1">۱ عکس</p>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-3">
+                <button
+                  class="order-btn rounded-full bg-gradient-to-r from-amber-500 to-rose-500 px-6 py-3 text-sm text-white shadow-lg shadow-orange-200 transition hover:scale-[1.02]"
+                  data-book="نام کتاب دوم"
+                  type="button"
+                >
+                  ثبت سفارش این کتاب
+                </button>
+                <a href="https://ble.ir/Montazer_admin" target="_blank" rel="noopener noreferrer" class="rounded-full border border-amber-200 bg-white px-6 py-3 text-sm text-amber-700 transition hover:bg-amber-50">
+                  پیام در بله
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 3: Featured book with multiple cover images -->
+        <article class="overflow-hidden rounded-[2rem] border border-violet-100 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+          <div class="grid md:grid-cols-2">
+            <div class="bg-gradient-to-br from-cyan-50 to-indigo-50 p-4 md:p-5">
+              <div class="book-gallery relative overflow-hidden rounded-[1.5rem] border border-cyan-100 bg-white shadow-sm" data-gallery>
+                <div class="gallery-track flex transition-transform duration-500">
+                  <img src="./images/book3-back.jpg.png" alt="جلد اول کتاب سوم" class="h-[360px] w-full shrink-0 object-cover">
+                  <img src="./images/book3-front.jpg.png" alt="جلد دوم کتاب سوم" class="h-[360px] w-full shrink-0 object-cover">
+                </div>
+
+                <button class="gallery-prev absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl text-indigo-700 shadow-lg transition hover:scale-110" type="button" aria-label="عکس قبلی">‹</button>
+                <button class="gallery-next absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl text-indigo-700 shadow-lg transition hover:scale-110" type="button" aria-label="عکس بعدی">›</button>
+
+                <div class="gallery-dots absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2"></div>
+              </div>
+            </div>
+
+            <div class="p-5 md:p-6">
+              <div class="mb-4 flex items-start justify-between gap-4">
+                <div>
+                  <span class="mb-2 inline-flex rounded-full bg-cyan-100 px-3 py-1 text-xs text-cyan-700">دو تصویری</span>
+                  <h3 class="text-2xl text-slate-900">نام کتاب سوم</h3>
+                </div>
+                <span class="rounded-xl bg-indigo-50 px-3 py-2 text-sm text-indigo-600">خاص</span>
+              </div>
+
+              <p class="mb-5 text-sm leading-7 text-slate-600">
+                اینجا توضیحات کتاب سوم را قرار بده. اگر خواستی می‌توانی معرفی عمیق‌تر، خلاصه اثر یا مخاطب مناسب کتاب را بنویسی.
+              </p>
+
+              <div class="mb-6 grid grid-cols-2 gap-3 text-sm">
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">نویسنده</span>
+                  <p class="mt-1">محمد منتظر</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">نوع</span>
+                  <p class="mt-1">کتاب ویژه</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">وضعیت</span>
+                  <p class="mt-1 text-emerald-600">آماده سفارش</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">تصاویر</span>
+                  <p class="mt-1">۲ عکس</p>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-3">
+                <button
+                  class="order-btn rounded-full bg-gradient-to-r from-cyan-500 to-indigo-500 px-6 py-3 text-sm text-white shadow-lg shadow-cyan-200 transition hover:scale-[1.02]"
+                  data-book="نام کتاب سوم"
+                  type="button"
+                >
+                  ثبت سفارش این کتاب
+                </button>
+                <a href="https://ble.ir/Montazer_admin" target="_blank" rel="noopener noreferrer" class="rounded-full border border-cyan-200 bg-white px-6 py-3 text-sm text-cyan-700 transition hover:bg-cyan-50">
+                  پیام در بله
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 4: Popular book selection -->
+        <article class="overflow-hidden rounded-[2rem] border border-violet-100 bg-white shadow-lg transition hover:-translate-y-1 hover:shadow-2xl">
+          <div class="grid md:grid-cols-2">
+            <div class="bg-gradient-to-br from-emerald-50 to-teal-50 p-4 md:p-5">
+              <div class="book-gallery relative overflow-hidden rounded-[1.5rem] border border-emerald-100 bg-white shadow-sm" data-gallery>
+                <div class="gallery-track flex transition-transform duration-500">
+                  <img src="./images/book4.jpg.png" alt="جلد کتاب چهارم" class="h-[360px] w-full shrink-0 object-cover">
+                </div>
+                <div class="gallery-dots absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2"></div>
+              </div>
+            </div>
+
+            <div class="p-5 md:p-6">
+              <div class="mb-4 flex items-start justify-between gap-4">
+                <div>
+                  <span class="mb-2 inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs text-emerald-700">محبوب</span>
+                  <h3 class="text-2xl text-slate-900">نام کتاب چهارم</h3>
+                </div>
+                <span class="rounded-xl bg-emerald-50 px-3 py-2 text-sm text-emerald-600">موجود</span>
+              </div>
+
+              <p class="mb-5 text-sm leading-7 text-slate-600">
+                معرفی کوتاه کتاب چهارم. اگر درباره این اثر توضیح اختصاصی داری، همین‌جا قرار بده تا کارت کامل‌تر و حرفه‌ای‌تر شود.
+              </p>
+
+              <div class="mb-6 grid grid-cols-2 gap-3 text-sm">
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">نویسنده</span>
+                  <p class="mt-1">محمد منتظر</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">نوع</span>
+                  <p class="mt-1">کتاب مستقل</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">وضعیت</span>
+                  <p class="mt-1 text-emerald-600">آماده سفارش</p>
+                </div>
+                <div class="rounded-2xl bg-slate-50 p-3">
+                  <span class="text-slate-500">تصاویر</span>
+                  <p class="mt-1">۱ عکس</p>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-3">
+                <button
+                  class="order-btn rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-6 py-3 text-sm text-white shadow-lg shadow-emerald-200 transition hover:scale-[1.02]"
+                  data-book="نام کتاب چهارم"
+                  type="button"
+                >
+                  ثبت سفارش این کتاب
+                </button>
+                <a href="https://ble.ir/Montazer_admin" target="_blank" rel="noopener noreferrer" class="rounded-full border border-emerald-200 bg-white px-6 py-3 text-sm text-emerald-700 transition hover:bg-emerald-50">
+                  پیام در بله
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form Section: Customer order submission form -->
+  <section id="order" class="py-14 md:py-20">
+    <div class="mx-auto max-w-4xl px-4 md:px-6">
+      <!-- Order form card container -->
+      <div class="overflow-hidden rounded-[2rem] border border-violet-100 bg-white shadow-2xl">
+        <!-- Form header with gradient background -->
+        <div class="bg-gradient-to-r from-violet-700 via-fuchsia-600 to-pink-500 px-6 py-8 text-white md:px-8">
+          <h2 class="text-3xl md:text-4xl">ثبت سفارش کتاب</h2>
+          <p class="mt-3 text-sm leading-7 text-white/85">
+            فرم زیر را کامل کن تا سفارش تو ثبت شود. همچنین می‌توانی از طریق بله هم پیام بدهی.
+          </p>
+        </div>
+
+        <!-- Order form with responsive grid layout -->
+        <form id="orderForm" class="grid gap-5 p-6 md:grid-cols-2 md:p-8">
+          <!-- Customer name input field -->
+          <div>
+            <label for="customerName" class="mb-2 block text-sm text-slate-700">نام و نام خانوادگی</label>
+            <input id="customerName" type="text" class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none transition focus:border-violet-400 focus:bg-white" placeholder="مثلاً محمد رضایی" />
+          </div>
+
+          <!-- Customer phone number field -->
+          <div>
+            <label for="customerPhone" class="mb-2 block text-sm text-slate-700">شماره تماس</label>
+            <input id="customerPhone" type="text" inputmode="numeric" class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none transition focus:border-violet-400 focus:bg-white" placeholder="مثلاً 09123456789" />
+          </div>
+
+          <!-- Book selection field -->
+          <div>
+            <label for="bookName" class="mb-2 block text-sm text-slate-700">نام کتاب</label>
+            <input id="bookName" type="text" class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none transition focus:border-violet-400 focus:bg-white" placeholder="کتاب انتخابی شما" />
+          </div>
+
+          <!-- Book quantity field -->
+          <div>
+            <label for="bookCount" class="mb-2 block text-sm text-slate-700">تعداد</label>
+            <input id="bookCount" type="number" min="1" value="1" class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none transition focus:border-violet-400 focus:bg-white" />
+          </div>
+
+          <!-- Address and notes field spanning full width -->
+          <div class="md:col-span-2">
+            <label for="customerAddress" class="mb-2 block text-sm text-slate-700">آدرس / توضیحات</label>
+            <textarea id="customerAddress" rows="4" class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none transition focus:border-violet-400 focus:bg-white" placeholder="آدرس یا توضیحات سفارش را وارد کنید"></textarea>
+          </div>
+
+          <!-- Submit buttons and message display -->
+          <div class="md:col-span-2 flex flex-wrap gap-3 pt-2">
+            <button type="submit" class="rounded-full bg-gradient-to-r from-violet-600 to-pink-500 px-8 py-3.5 text-sm text-white shadow-lg shadow-violet-200 transition hover:scale-[1.02]">
+              ثبت سفارش
+            </button>
+            <a href="https://ble.ir/Montazer_admin" target="_blank" rel="noopener noreferrer" class="rounded-full border border-violet-200 bg-white px-8 py-3.5 text-sm text-violet-700 transition hover:bg-violet-50">
+              سفارش در بله
+            </a>
+          </div>
+
+          <p id="formMessage" class="md:col-span-2 text-sm"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section: Author biography and platform features -->
+  <section id="about" class="bg-white py-14 md:py-20">
+    <div class="mx-auto max-w-7xl px-4 md:px-6">
+      <!-- Two-column layout: text and feature cards -->
+      <div class="grid items-center gap-10 lg:grid-cols-2">
+        <div>
+          <span class="mb-2 inline-block text-sm text-violet-700">درباره نویسنده</span>
+          <h2 class="text-3xl text-slate-900 md:text-5xl">محمد منتظر</h2>
+          <p class="mt-5 leading-8 text-slate-600">
+            این بخش برای معرفی نویسنده و آثار اوست. می‌توانی زندگینامه کوتاه، حوزه فعالیت، سبک نوشتار و توضیحات تکمیلی را اینجا قرار بدهی.
+          </p>
+          <p class="mt-4 leading-8 text-slate-600">
+            اگر بخواهی، بعداً می‌توانیم این قسمت را هم حرفه‌ای‌تر کنیم و برایش تصویر، آمار، نقل‌قول و بخش دستاوردها بگذاریم.
+          </p>
+        </div>
+
+        <!-- Feature highlights grid -->
+        <div class="grid gap-4 sm:grid-cols-2">
+          <!-- Primary feature card -->
+          <div class="rounded-3xl bg-gradient-to-br from-violet-600 to-fuchsia-500 p-6 text-white shadow-lg">
+            <p class="text-sm opacity-90">تجربه کاربری</p>
+            <h3 class="mt-3 text-xl">ویترین حرفه‌ای برای معرفی کتاب</h3>
+          </div>
+          <div class="rounded-3xl border border-slate-100 bg-slate-50 p-6">
+            <p class="text-sm text-slate-500">تمرکز</p>
+            <h3 class="mt-3 text-xl text-slate-900">نمایش بهتر آثار و جذب مخاطب</h3>
+          </div>
+          <div class="rounded-3xl border border-slate-100 bg-slate-50 p-6 sm:col-span-2">
+            <p class="text-sm text-slate-500">امکان توسعه</p>
+            <h3 class="mt-3 text-xl text-slate-900">اتصال به پنل ادمین، ذخیره سفارش و افزودن کتاب‌های بیشتر</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer: Site footer with links and credits -->
+  <footer class="border-t border-slate-200 bg-slate-950 py-8 text-white">
+    <div class="mx-auto max-w-7xl px-4 md:px-6">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <!-- Footer branding and credits -->
+        <div>
+          <h3 class="text-lg">کتاب‌های محمد منتظر</h3>
+          <p class="mt-2 text-sm text-white/70">طراحی شده توسط امیر علی چهاردولی 
+          </p>
+        </div>
+        <!-- Footer navigation links -->
+        <div class="flex flex-wrap gap-3">
+          <a href="#books" class="rounded-full border border-white/15 px-4 py-2 text-sm text-white/90 transition hover:bg-white/10">کتاب‌ها</a>
+          <a href="#order" class="rounded-full border border-white/15 px-4 py-2 text-sm text-white/90 transition hover:bg-white/10">ثبت سفارش</a>
+          <a href="https://ble.ir/Montazer_admin" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/15 px-4 py-2 text-sm text-white/90 transition hover:bg-white/10">بله</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Gallery
+    document.querySelectorAll('[data-gallery]').forEach((gallery) => {
+      const track = gallery.querySelector('.gallery-track');
+      const slides = gallery.querySelectorAll('img');
+      const dotsWrap = gallery.querySelector('.gallery-dots');
+      const prevBtn = gallery.querySelector('.gallery-prev');
+      const nextBtn = gallery.querySelector('.gallery-next');
+      let index = 0;
+
+      if (slides.length <= 1) {
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+      }
+
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.setAttribute('aria-label', `رفتن به تصویر ${i + 1}`);
+        dot.className = i === 0
+          ? 'h-2.5 w-5 rounded-full bg-white transition'
+          : 'h-2.5 w-2.5 rounded-full border border-white/80 bg-white/70 transition';
+
+        dot.addEventListener('click', () => {
+          index = i;
+          updateGallery();
+        });
+
+        dotsWrap.appendChild(dot);
+      });
+
+      const dots = dotsWrap.querySelectorAll('button');
+
+      function updateGallery() {
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach((dot, i) => {
+          dot.className = i === index
+            ? 'h-2.5 w-5 rounded-full bg-white transition'
+            : 'h-2.5 w-2.5 rounded-full border border-white/80 bg-white/70 transition';
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          index = (index + 1) % slides.length;
+          updateGallery();
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          index = (index - 1 + slides.length) % slides.length;
+          updateGallery();
+        });
+      }
+
+      let startX = 0;
+      let endX = 0;
+
+      gallery.addEventListener('touchstart', (e) => {
+        startX = e.changedTouches[0].screenX;
+      });
+
+      gallery.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].screenX;
+        const diff = endX - startX;
+
+        if (Math.abs(diff) > 40 && slides.length > 1) {
+          if (diff < 0) {
+            index = (index + 1) % slides.length;
+          } else {
+            index = (index - 1 + slides.length) % slides.length;
+          }
+          updateGallery();
+        }
+      });
+
+      updateGallery();
+    });
+
+    // Order buttons
+    const bookNameInput = document.getElementById('bookName');
+    document.querySelectorAll('.order-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const book = btn.getAttribute('data-book');
+        bookNameInput.value = book;
+        document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Order form
+    const form = document.getElementById('orderForm');
+    const formMessage = document.getElementById('formMessage');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('customerName').value.trim();
+      const phone = document.getElementById('customerPhone').value.trim();
+      const book = document.getElementById('bookName').value.trim();
+      const count = document.getElementById('bookCount').value.trim();
+      const address = document.getElementById('customerAddress').value.trim();
+
+      if (!name || !phone || !book) {
+        formMessage.textContent = 'لطفاً نام، شماره تماس و نام کتاب را کامل وارد کنید.';
+        formMessage.className = 'md:col-span-2 text-sm text-red-500';
+        return;
+      }
+
+      const phoneRegex = /^09\d{9}$/;
+      if (!phoneRegex.test(phone)) {
+        formMessage.textContent = 'شماره تماس معتبر وارد کنید. مثال: 09123456789';
+        formMessage.className = 'md:col-span-2 text-sm text-red-500';
+        return;
+      }
+
+      const orders = JSON.parse(localStorage.getItem('bookOrders') || '[]');
+      orders.push({
+        id: Date.now(),
+        name,
+        phone,
+        book,
+        count,
+        address,
+        date: new Date().toLocaleString('fa-IR')
+      });
+      localStorage.setItem('bookOrders', JSON.stringify(orders));
+
+      formMessage.textContent = 'سفارش با موفقیت ثبت شد ✅';
+      formMessage.className = 'md:col-span-2 text-sm text-emerald-600';
+
+      form.reset();
+      document.getElementById('bookCount').value = 1;
+    });
+  </script>
+  <!-- JavaScript initialization for interactive features -->
+  <script src="script.js"></script>
+</body>
+</html>

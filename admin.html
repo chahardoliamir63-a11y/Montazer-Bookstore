@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- Admin Management Panel for Book Orders -->
+<!-- Dashboard for managing orders and sales statistics -->
+<html lang="fa" dir="rtl">
+<head>
+  <!-- Character encoding and viewport configuration -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Page title for admin panel -->
+  <title>پنل مدیریت | کتاب‌ها</title>
+  <!-- Tailwind CSS CDN for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind configuration for custom color palette -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#7c3aed',      /* Purple primary color */
+            secondary: '#ec4899',    /* Pink secondary color */
+            dark: '#1e1b4b'          /* Dark slate color */
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom font styling -->
+  <style>
+    body {  font-Vazir font-bold -family: Tahoma, sans-serif; }
+  </style>
+</head>
+<!-- Main page body with gradient background -->
+<body class="bg-gradient-to-b from-violet-50 via-white to-pink-50 min-h-screen text-gray-800">
+
+  <!-- Login Section: Initial authentication screen -->
+  <section id="loginSection" class="min-h-screen flex items-center justify-center px-6">
+    <!-- Login card container -->
+    <div class="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-violet-100 p-8">
+      <!-- Login form header -->
+      <div class="text-center mb-8">
+        <h1 class="text-3xl  font-Vazir font-bold -black text-dark mb-2">ورود مدیر</h1>
+        <p class="text-gray-500">برای ورود به پنل مدیریت اطلاعات را وارد کنید</p>
+      </div>
+
+      <!-- Login form with username and password fields -->
+      <form id="loginForm" class="space-y-5">
+        <!-- Username input field -->
+        <div>
+          <label class="block mb-2 text-sm  font-Vazir font-bold -bold text-gray-700">نام کاربری</label>
+          <input id="username" type="text" class="w-full rounded-2xl border border-violet-200 px-4 py-3 outline-none focus:border-primary" placeholder="admin">
+        </div>
+
+        <!-- Password input field -->
+        <div>
+          <label class="block mb-2 text-sm  font-Vazir font-bold -bold text-gray-700">رمز عبور</label>
+          <input id="password" type="password" class="w-full rounded-2xl border border-violet-200 px-4 py-3 outline-none focus:border-primary" placeholder="1234">
+        </div>
+
+        <button type="submit" class="w-full rounded-2xl bg-primary py-3 text-white  font-Vazir font-bold -black hover:bg-violet-700 transition">
+          ورود
+        </button>
+      </form>
+
+      <!-- Error message display (hidden by default) -->
+      <div id="loginError" class="hidden mt-5 rounded-2xl bg-red-50 border border-red-200 px-4 py-3 text-red-600  font-Vazir font-bold -bold text-sm">
+        نام کاربری یا رمز عبور اشتباه است.
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard Section: Admin control panel (hidden until login) -->
+  <section id="dashboardSection" class="hidden">
+    <!-- Dashboard header with navigation -->
+    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-violet-100">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+        <!-- Header title and subtitle -->
+        <div>
+          <h2 class="text-2xl  font-Vazir font-bold -black text-dark">پنل مدیریت فروش</h2>
+          <p class="text-sm text-gray-500">مدیریت سفارش‌ها و وضعیت فروش</p>
+        </div>
+
+        <!-- Navigation buttons: back to site and logout -->
+        <div class="flex gap-3">
+          <a href="index.html" class="rounded-full border border-violet-200 px-5 py-2.5 text-primary  font-Vazir font-bold -bold hover:bg-violet-50 transition">
+            بازگشت به سایت
+          </a>
+          <button id="logoutBtn" class="rounded-full bg-pink-500 px-5 py-2.5 text-white  font-Vazir font-bold -bold hover:bg-pink-600 transition">
+            خروج
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main dashboard content -->
+    <main class="max-w-7xl mx-auto px-6 py-10">
+      <!-- Statistics section: displaying key metrics -->
+      <div class="grid md:grid-cols-3 gap-5 mb-8">
+        <!-- Stat card: Total orders -->
+        <div class="bg-white rounded-3xl border border-violet-100 shadow-lg p-6">
+          <p class="text-sm text-gray-500 mb-2">تعداد سفارش‌ها</p>
+          <h3 id="ordersCount" class="text-3xl  font-Vazir font-bold -black text-primary">0</h3>
+        </div>
+        <!-- Stat card: Total sales revenue -->
+        <div class="bg-white rounded-3xl border border-pink-100 shadow-lg p-6">
+          <p class="text-sm text-gray-500 mb-2">مجموع فروش</p>
+          <h3 id="totalSales" class="text-3xl  font-Vazir font-bold -black text-secondary">0</h3>
+        </div>
+        <!-- Stat card: New orders count -->
+        <div class="bg-white rounded-3xl border border-indigo-100 shadow-lg p-6">
+          <p class="text-sm text-gray-500 mb-2">سفارش‌های جدید</p>
+          <h3 id="newOrdersCount" class="text-3xl  font-Vazir font-bold -black text-indigo-600">0</h3>
+        </div>
+      </div>
+
+      <!-- Orders Management Section: Display and manage all orders -->
+      <div class="bg-white rounded-3xl border border-violet-100 shadow-lg overflow-hidden">
+        <!-- Orders section header with clear all button -->
+        <div class="p-6 border-b border-violet-100 flex flex-col md:flex-row items-center justify-between gap-4">
+          <!-- Section title -->
+          <div>
+            <h3 class="text-2xl  font-Vazir font-bold -black text-dark">لیست سفارش‌ها</h3>
+            <p class="text-gray-500 text-sm">تمام سفارش‌های ثبت‌شده در سایت</p>
+          </div>
+
+          <!-- Clear all orders button with confirmation -->
+          <button id="clearAllBtn" class="rounded-full bg-red-500 px-5 py-2.5 text-white  font-Vazir font-bold -bold hover:bg-red-600 transition">
+            حذف همه سفارش‌ها
+          </button>
+        </div>
+
+        <!-- Orders list container - dynamically populated by JavaScript -->
+        <div id="ordersContainer" class="p-6 space-y-4">
+          <!-- Individual order cards will be rendered here -->
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <!-- Admin panel JavaScript for functionality -->
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Vazir";
+  src: url("./assets/font/Vazirmatn-Medium.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vazir";
+  src: url("./assets/font/Vazirmatn-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Vazir", sans-serif;
+}
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Vazir";
+  src: url("./assets/font/Vazirmatn-Medium.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: "Vazir", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Vazir";
+  src: url("./assets/font/Vazirmatn-Medium.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Vazir";
+  src: url("/font/Vazirmatn-Medium.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Vazir", sans-serif !important;
+  box-sizing: border-box;
+}
